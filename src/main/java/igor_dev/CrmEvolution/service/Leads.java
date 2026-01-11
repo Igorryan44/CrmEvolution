@@ -26,7 +26,7 @@ public class Leads {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    private LeadStatus status;
+    private LeadStatus leadStatus;
 
     private String empresa;
 
@@ -60,4 +60,5 @@ public class Leads {
     private Segmento segmento;
 
     private String observacoes;
+
 }
