@@ -4,14 +4,22 @@ import igor_dev.CrmEvolution.enums.Canais;
 import igor_dev.CrmEvolution.enums.LeadStatus;
 import igor_dev.CrmEvolution.enums.MotivoNegativa;
 import igor_dev.CrmEvolution.enums.Segmento;
-import igor_dev.CrmEvolution.kpis.KpisFunil;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
+import java.time.*;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-public class Lead {
+@Table()
+public class Leads {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,15 +43,15 @@ public class Lead {
     private OffsetDateTime agendamento;
 
     @Enumerated(EnumType.STRING)
-    private MotivoNegativa motivoNegatia;
+    private MotivoNegativa motivoNegativa;
 
     private BigDecimal valorEstimado;
 
     private String proximoPasso;
 
-    private KpisFunil diasFunil;
+    private Integer diasFunil; /* TODO: Implementar lógica de KPIs para essa coluna*/
 
-    private KpisFunil score;
+    private Integer score; /* TODO: Implementar lógica de KPIs para essa coluna*/
 
     @Enumerated(EnumType.STRING)
     private Canais canalOrigem;
