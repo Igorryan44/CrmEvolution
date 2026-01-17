@@ -1,9 +1,9 @@
 package igor_dev.CrmEvolution.repository;
 
-import igor_dev.CrmEvolution.model.Leads;
+import igor_dev.CrmEvolution.model.Lead;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LeadsRepository extends JpaRepository<Leads, Long> {
+public interface LeadRepository extends JpaRepository<Lead, Long> {
 }

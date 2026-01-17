@@ -1,7 +1,8 @@
 package igor_dev.CrmEvolution.service;
 
-import igor_dev.CrmEvolution.model.Leads;
-import igor_dev.CrmEvolution.repository.LeadsRepository;
+import igor_dev.CrmEvolution.dto.LeadResponseDTO;
+import igor_dev.CrmEvolution.model.Lead;
+import igor_dev.CrmEvolution.repository.LeadRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,13 +12,14 @@ import java.util.Optional;
 public class LeadsService {
 
     @Autowired
-    private LeadsRepository leadsRepository;
+    private LeadRepository leadsRepository;
+    private LeadResponseDTO leadResponseDTO;
 
-    public Leads createLead(Leads lead){
+    public Lead createLead(Lead lead){
         return leadsRepository.save(lead);
     }
 
-    public Optional<Leads> findLeadsById(Long id){
+    public Optional<Lead> findLeadsById(Long id){
         return leadsRepository.findById(id);
     }
 
