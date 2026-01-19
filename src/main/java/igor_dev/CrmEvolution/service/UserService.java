@@ -17,6 +17,7 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
     private UserMapper mapper;
 
     public UserResponseDTO save(UserRequestDTO userRequest) {

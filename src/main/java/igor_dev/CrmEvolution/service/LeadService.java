@@ -18,6 +18,7 @@ public class LeadService {
 
     @Autowired
     private LeadRepository leadRepository;
+    @Autowired
     private LeadMapper mapper;
 
     public List<LeadResponseDTO> getAllLeads(){
