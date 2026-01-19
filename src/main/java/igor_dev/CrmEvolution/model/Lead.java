@@ -4,9 +4,6 @@ import igor_dev.CrmEvolution.enums.Canais;
 import igor_dev.CrmEvolution.enums.LeadStatus;
 import igor_dev.CrmEvolution.enums.Segmento;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.time.*;
 
@@ -55,7 +52,12 @@ public class Lead {
         this.updateAt = updateAt;
     }
 
+
     /// Setters
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
     }

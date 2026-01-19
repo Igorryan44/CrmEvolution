@@ -37,4 +37,15 @@ public class UserService {
         User entity = userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado!"));
         userRepository.delete(entity);
     }
+
+    public UserResponseDTO updateUser(UserRequestDTO userRequest, Long id){
+        User userOld = userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado!"));
+
+        userOld.setId(id);
+        userOld.setName(userRequest.name() != null ? userRequest.name() : userOld.getName());
+        userOld.setNickname(userRequest.nickname() != null ? userRequest.nickname() : userOld.getNickname());
+        userOld.setEmail(userRequest.email() != null ? userRequest.email() : userOld.getEmail());
+
+        return mapper.toUserResponseDTO(userRepository.save(userOld));
+    }
 }
