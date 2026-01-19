@@ -6,6 +6,7 @@ import igor_dev.CrmEvolution.mapper.UserMapper;
 import igor_dev.CrmEvolution.model.User;
 import igor_dev.CrmEvolution.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,14 +15,12 @@ import java.util.Optional;
 @Service
 public class UserService {
 
+    @Autowired
     private UserRepository userRepository;
     private UserMapper mapper;
 
     public UserResponseDTO save(UserRequestDTO userRequest) {
-        return mapper
-                .toUserResponseDTO(userRepository
-                        .save(mapper
-                                .toUserEntity(userRequest)));
+        return mapper.toUserResponseDTO(userRepository.save(mapper.toUserEntity(userRequest)));
     }
 
     public List<UserResponseDTO> findAll() {
