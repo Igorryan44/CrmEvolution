@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+import static igor_dev.CrmEvolution.enums.UserAccess.EMPLOYEE;
+
 @Service
 public class UserService {
 
@@ -21,7 +23,15 @@ public class UserService {
     private UserMapper mapper;
 
     public UserResponseDTO save(UserRequestDTO userRequest) {
-        return mapper.toUserResponseDTO(userRepository.save(mapper.toUserEntity(userRequest)));
+        User user = new User();
+
+        user.setName(userRequest.name());
+        user.setNickname(userRequest.nickname());
+        user.setEmail(userRequest.email());
+        user.setSenha(userRequest.senha());
+        user.setAccess(EMPLOYEE);
+
+        return mapper.toUserResponseDTO(userRepository.save(user));
     }
 
     public List<UserResponseDTO> findAll() {
