@@ -53,4 +53,14 @@ public class LeadController {
         return ResponseEntity.ok(leadService.getLeadByStatus(status));
     }
 
+    @PutMapping("/status/{id}/update")
+    public ResponseEntity<LeadResponseDTO> updateLeadStatus(@PathVariable Long id, @Valid @RequestBody String status){
+        return ResponseEntity.ok(leadService.updateStatus(id, status));
+    }
+
+    @PutMapping("/segmento/{id}/segmento")
+    public ResponseEntity<LeadResponseDTO> updateLeadSegmento(@PathVariable Long id, @Valid @RequestBody String segmento){
+        return ResponseEntity.ok(leadService.updateSegmento(id, segmento));
+    }
+
 }

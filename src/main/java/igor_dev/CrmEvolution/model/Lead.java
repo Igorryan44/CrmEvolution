@@ -78,6 +78,10 @@ public class Lead {
         this.score = score;
     }
 
+    public void setCreateAt(OffsetDateTime createAt) {
+        this.createAt = createAt;
+    }
+
     public void setUpdateAt(OffsetDateTime updateAt) {
         this.updateAt = updateAt;
     }
