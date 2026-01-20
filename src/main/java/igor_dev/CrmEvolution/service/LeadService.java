@@ -29,10 +29,6 @@ public class LeadService {
         return mapper.toLeadResponseDTO(leadRepository.save(mapper.toLeadEntity(leadRequest)));
     }
 
-    public Optional<Lead> findLeadsById(Long id){
-        return leadRepository.findById(id);
-    }
-
     public Optional<LeadResponseDTO> findById(Long id) {
         Lead entity = leadRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Lead não encontrado!"));
         return Optional.ofNullable(mapper.toLeadResponseDTO(entity));
