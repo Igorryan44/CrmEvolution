@@ -43,7 +43,7 @@ public class LeadController {
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<LeadResponseDTO> updateLead(@Valid @RequestBody LeadRequestDTO lead, @PathVariable Long id){
         return ResponseEntity.ok(leadService.updateLead(lead, id));
     }

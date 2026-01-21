@@ -44,9 +44,14 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<UserResponseDTO> updateUser(@Valid @RequestBody UserRequestDTO user, @PathVariable Long id){
         return ResponseEntity.ok(userService.updateUser(user, id));
+    }
+
+    @PutMapping("/access/{id}")
+    public ResponseEntity<UserResponseDTO> updateUserAccess(@PathVariable Long id, @Valid @RequestBody String access){
+        return ResponseEntity.ok(userService.updateUserAccess(id, access));
     }
 
 }

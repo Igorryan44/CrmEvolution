@@ -2,6 +2,7 @@ package igor_dev.CrmEvolution.service;
 
 import igor_dev.CrmEvolution.dto.UserRequestDTO;
 import igor_dev.CrmEvolution.dto.UserResponseDTO;
+import igor_dev.CrmEvolution.enums.UserAccess;
 import igor_dev.CrmEvolution.mapper.UserMapper;
 import igor_dev.CrmEvolution.model.User;
 import igor_dev.CrmEvolution.repository.UserRepository;
@@ -56,6 +57,15 @@ public class UserService {
         userOld.setName(userRequest.name() != null ? userRequest.name() : userOld.getName());
         userOld.setNickname(userRequest.nickname() != null ? userRequest.nickname() : userOld.getNickname());
         userOld.setEmail(userRequest.email() != null ? userRequest.email() : userOld.getEmail());
+
+        return mapper.toUserResponseDTO(userRepository.save(userOld));
+    }
+
+    public UserResponseDTO updateUserAccess(Long id, String access){
+        User userOld = userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado!"));
+
+        userOld.setId(id);
+        userOld.setAccess(UserAccess.valueOf(access));
 
         return mapper.toUserResponseDTO(userRepository.save(userOld));
     }
