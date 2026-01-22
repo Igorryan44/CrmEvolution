@@ -19,6 +19,7 @@ public class Lead {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -41,7 +42,7 @@ public class Lead {
 
     private OffsetDateTime updateAt;
 
-    @OneToMany(mappedBy = "interacoes")
+    @OneToMany(mappedBy = "lead")
     private List<Interacao> interacao;
 
 }

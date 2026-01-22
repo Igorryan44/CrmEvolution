@@ -33,7 +33,7 @@ public class Empresa {
 
     private OffsetDateTime createdAt;
 
-    @OneToMany(mappedBy = "leads", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "empresa", cascade = CascadeType.ALL)
     private List<Lead> leads;
 
 }

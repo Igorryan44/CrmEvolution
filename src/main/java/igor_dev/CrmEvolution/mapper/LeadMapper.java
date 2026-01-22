@@ -12,7 +12,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface LeadMapper {
 
-    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "Lead.id", ignore = true)
     Lead toLeadEntity(LeadRequestDTO leadDTO);
 
     LeadResponseDTO toLeadResponseDTO(Lead leadEntity);
