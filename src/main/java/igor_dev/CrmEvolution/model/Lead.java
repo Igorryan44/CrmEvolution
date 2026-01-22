@@ -45,4 +45,18 @@ public class Lead {
     @OneToMany(mappedBy = "lead")
     private List<Interacao> interacao;
 
+    @OneToMany(mappedBy = "lead")
+    private List<Contato> contatos;
+
+    @OneToMany(mappedBy = "lead")
+    private List<Agendamento> agendamentos;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    private AuditEntry audit;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    private Email email;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    private User user;
 }

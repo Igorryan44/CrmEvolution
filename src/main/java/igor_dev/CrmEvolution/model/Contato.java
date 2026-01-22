@@ -27,4 +27,8 @@ public class Contato {
     private String telefone;
 
     private OffsetDateTime createdAt;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "lead_id")
+    private Lead lead;
 }

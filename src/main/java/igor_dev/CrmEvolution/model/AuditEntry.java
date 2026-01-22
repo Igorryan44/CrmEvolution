@@ -31,4 +31,8 @@ public class AuditEntry {
     private Canais canal;
 
     private OffsetDateTime timestamp;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "lead_id")
+    private Lead lead;
 }

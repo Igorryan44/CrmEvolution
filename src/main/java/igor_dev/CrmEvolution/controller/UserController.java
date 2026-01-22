@@ -20,6 +20,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /// Aplicar lógica de gestão de acessos
     @PostMapping
     @Valid
     public ResponseEntity<UserResponseDTO> createUser(@Valid @RequestBody UserRequestDTO user){

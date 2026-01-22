@@ -20,12 +20,14 @@ public class User {
     @Column(unique = true)
     private String nickname;
 
-    @Column(unique = true)
-    private String email;
+    @OneToOne(fetch = FetchType.LAZY)
+    private Email email;
 
     private String senha;
 
     @Enumerated(EnumType.STRING)
     private UserAccess access;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    private Lead lead;
 }

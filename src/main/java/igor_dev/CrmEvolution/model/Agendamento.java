@@ -27,4 +27,8 @@ public class Agendamento {
     private Boolean realizado;
 
     private OffsetDateTime createAt;
+
+    @ManyToOne()
+    @JoinColumn(name = "lead_id")
+    private Lead lead;
 }
