@@ -13,7 +13,7 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table()
+@Table(name = "interacoes")
 public class Interacao {
 
     @Id
@@ -27,4 +27,8 @@ public class Interacao {
     private OffsetDateTime dataHora;
 
     private OffsetDateTime sucesso;
+
+    @ManyToOne()
+    @JoinColumn(name = "lead_id")
+    private Lead lead;
 }
