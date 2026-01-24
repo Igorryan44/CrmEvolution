@@ -260,7 +260,7 @@ Antes de começar a usar o CRM Evolution, certifique-se de que seu ambiente de e
 - **Linguagem:** [Java 25](https://openjdk.org/)  
   Utilização das JEPs mais recentes para ganhos de produtividade, imutabilidade e clareza semântica.
 
-- **Framework:** [Spring Boot 4.0.1](https://spring.io/projects/spring-boot)  
+- **Framework:** [Spring Boot 3.5.9](https://docs.spring.io/spring-boot/3.5/documentation.html)  
   Base para construção de aplicações modernas, seguras e escaláveis.
 
 - **Persistência:** Spring Data JPA + Hibernate  
