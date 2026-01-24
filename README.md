@@ -1,7 +1,7 @@
 <p align="center">
     <img src="src/main/resources/static/images/crm_evolution.png" align="center" width="45%">
 </p>
-<p align="center"><h1 align="center">CRMEVOLUTION</h1></p>
+<p align="center"><h1 align="center">CRM EVOLUTION</h1></p>
 <p align="center">
 	<em><code>❯ Inteligência. Performance. Evolução</code></em>
 </p>
@@ -19,9 +19,9 @@
 <br>
 
 ---
-# CrmEvolution 🚀
+# CRM Evolution 🚀
 
-O **CrmEvolution** é uma solução robusta de **Backend para Gestão de Relacionamento com o Cliente (CRM)**, projetada para alta performance, escalabilidade e rastreabilidade completa de pipelines de vendas.  
+O **CRM Evolution** é uma solução robusta de **Backend para Gestão de Relacionamento com o Cliente (CRM)**, projetada para alta performance, escalabilidade e rastreabilidade completa de pipelines de vendas.  
 O sistema é construído sobre o que há de mais atual no ecossistema Java, utilizando **Java 25** e **Spring Boot 4.0.1**, com foco em arquitetura limpa e domínio bem definido.
 
 
@@ -41,7 +41,7 @@ O sistema é construído sobre o que há de mais atual no ecossistema Java, util
 
 ###  Índice do Projeto 📚
 <details open>
-	<summary><b><code>CRMEVOLUTION/</code></b></summary>
+	<summary><b><code>CRM EVOLUTION/</code></b></summary>
 	<details> <!-- __root__ Submodule -->
 		<summary><b>__root__</b></summary>
 		<blockquote>
@@ -255,7 +255,7 @@ O sistema é construído sobre o que há de mais atual no ecossistema Java, util
 
 ###  Pré-requisitos
 
-Antes de começar a usar o CrmEvolution, certifique-se de que seu ambiente de execução atenda aos seguintes requisitos:
+Antes de começar a usar o CRM Evolution, certifique-se de que seu ambiente de execução atenda aos seguintes requisitos:
 
 - **Linguagem:** [Java 25](https://openjdk.org/)  
   Utilização das JEPs mais recentes para ganhos de produtividade, imutabilidade e clareza semântica.
@@ -280,11 +280,11 @@ Antes de começar a usar o CrmEvolution, certifique-se de que seu ambiente de ex
 
 ###  Instalação ⬇️
 
-Instale CrmEvolution usando os métodos a seguir:
+Instale CRM Evolution usando os métodos a seguir:
 
 **Build:**
 
-1. Clone o repositório CrmEvolution:
+1. Clone o repositório CRM Evolution:
 ```sh
 ❯ git clone https://github.com/Igorryan44/CrmEvolution
 ```
