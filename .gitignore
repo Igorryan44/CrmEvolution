@@ -97,8 +97,6 @@ Thumbs.db
 hs_err_pid*
 
 # Project
-test/
-*.test
 application.properties
 .gitattributes
 GUIDE.md
