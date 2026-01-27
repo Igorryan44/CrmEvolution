@@ -30,6 +30,7 @@ public class Lead {
     private LeadStatus status;
 
     @Enumerated(EnumType.STRING)
+    @Column(updatable = false, nullable = false)
     private Segmento segmento;
 
     @Enumerated(EnumType.STRING)

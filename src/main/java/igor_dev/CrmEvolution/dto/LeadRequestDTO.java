@@ -11,7 +11,7 @@ public record LeadRequestDTO(
         Empresa empresa,
 
         @NotBlank(message = "O campo 'segmento' não pode ser vazio")
-        Segmento segmento,
+        String segmento,
 
         @NotBlank(message = "O campo 'canalOrigem' não pode ser vazio")
         Canais canalOrigem

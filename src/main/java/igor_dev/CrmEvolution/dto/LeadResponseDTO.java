@@ -15,7 +15,7 @@ public record LeadResponseDTO(
 
         LeadStatus status,
 
-        Segmento segmento,
+        String segmento,
 
         Canais canalOrigem,
 

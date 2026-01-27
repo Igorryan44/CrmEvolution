@@ -34,7 +34,7 @@ public class LeadService {
 
         lead.setEmpresa(leadRequest.empresa());
         lead.setStatus(NOVO);
-        lead.setSegmento(leadRequest.segmento());
+        lead.setSegmento(Segmento.valueOf(leadRequest.segmento()));
         lead.setCanalOrigem(leadRequest.canalOrigem());
         lead.setCreateAt(OffsetDateTime.now());
 
@@ -56,8 +56,8 @@ public class LeadService {
 
         leadOld.setId(id);
         leadOld.setEmpresa(leadRequestDTO.empresa() !=null ? leadRequestDTO.empresa() : leadOld.getEmpresa());
-        leadOld.setSegmento(leadRequestDTO.segmento() !=null ? leadRequestDTO.segmento() : leadOld.getSegmento());
-        leadOld.setCanalOrigem(leadRequestDTO.canalOrigem() !=null ? leadRequestDTO.canalOrigem() : leadOld.getCanalOrigem());
+        leadOld.setSegmento(leadOld.getSegmento());
+        leadOld.setCanalOrigem(leadOld.getCanalOrigem());
         leadOld.setUpdateAt(OffsetDateTime.now());
 
         return mapper.toLeadResponseDTO(leadRepository.save(leadOld));
